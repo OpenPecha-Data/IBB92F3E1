@@ -1,0 +1,31 @@
+id: IBB92F3E1
+source: https://www2.hf.uio.no/polyglotta/index.php?page=library&bid=2
+source_file: null
+initial_creation_type: input
+imported: '2022-05-27T15:05:46.302534'
+last_modified: '2022-05-27T15:05:46.302567'
+parser: null
+source_metadata:
+  title: 'BA: Gaṇḍavyūhasūtra'
+  language: bo
+  base:
+    fA81C:
+      title: Title
+      base_file: fA81C.txt
+      order: 1
+    fE0AB:
+      title: Nidāna
+      base_file: fE0AB.txt
+      order: 2
+    f1972:
+      title: Samantabhadra
+      base_file: f1972.txt
+      order: 3
+  chapter_to_tile: {}
+statistics: {}
+quality: {}
+copyright:
+  status: Unknown
+  notice: ''
+  info_url: null
+license: null

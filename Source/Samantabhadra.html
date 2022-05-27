@@ -1,0 +1,377 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1155' accesskey='1'>BA: Gaṇḍavyūhasūtra</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>BA: Gaṇḍavyūhasūtra<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1155[6121]" value="6121" id="lancheckbox" checked >Sanskrit: BA-Gv san; Vaidya (1960),</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1155[6122]" value="6122" id="lancheckbox" checked >Chinese: BA-Gv chi, Prajñā (798CE), T.293</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1155[6123]" value="6123" id="lancheckbox" checked >Tibetan: BA45-Gv tib; Kg phal chen ga</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1155">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1155">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1155'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1155">Search in BA: Gaṇḍavyūhasūtra</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1155'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1155'>BA: Gaṇḍavyūhasūtra</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1155" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="148513.Title|148514.Nidāna|148515.Samantabhadra|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_148513.Title" border=0 hspace=2><a id="href_148513.Title" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1155&mid=1980269&level=1&cid=870470" class="ajax_tree0">Title
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_148514.Nidāna" border=0 hspace=2><a id="href_148514.Nidāna" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1155&mid=1980270&level=1&cid=870471" class="ajax_tree0">Nidāna
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_148515.Samantabhadra" border=0 hspace=2><a id="href_148515.Samantabhadra" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1155&mid=1980627&level=1&cid=870543" class="ajax_tree0">Samantabhadra
+</td></tr></table>
+<script language=javascript>test('148515.Samantabhadra|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1155&amp;mid=1980627&amp;level=1">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1155&amp;cid=870543&amp;mid=1980627&amp;level=1">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1155&amp;cid=870543&amp;mid=1980627&amp;level=1">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><div class='kilderef' id='8841400'></div><div class='clear'></div><span id='8841400bi' class='paragraph'>
+							(25) samantabhadraḥ |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><div class='kilderef' id='8841778'></div><div class='clear'></div><span id='8841778bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><div class='kilderef' id='8842156'></div><div class='clear'></div><span id='8842156bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='8841401bi' class='paragraph'>
+							atha khalu samantabhadro bodhisattvo mahāsattvaḥ sarvāvantaṃ bodhisattvagaṇaṃ vyavalokya bhūyasyā mātrayā vibhajan vistārayan deśayan uttānīkurvan saṃprakāśayan avabhāsayan prabhāsayan upadiśan dharmadhātunayena ākāśadhātusamatayā tryadhvasamatayā dharmadhātusamatayā sattvadhātusamatayā sarvalokadhātusamatayā sarvakarmavaṃśasamatayā sattvāśayasamatayā sattvādhimuktisamatayā dharmapratibhāsasamatayā sattvaparipākakālasamatayā sarvajagadindriyasamatayā ca, evaṃ siṃhavijṛmbhitaṃ tathāgatasamādhiṃ caiṣāṃ bodhisattvānāṃ saṃprakāśayati sma daśabhir nirdeśapadaiḥ |&nbsp;</span><span id='8841402bi' class='paragraph'>
+						 katamair daśabhiḥ? yad uta sarvadharmadhātuparyāpanneṣu buddhakṣetrapramāṇurajaḥsarvabuddhaparaṃparākṣetraparaṃparānirdeśaḥ | yad uta ākāśadhātuparameṣu sarvabuddhakṣetreṣu aparāntakoṭīgatakalpatathāgataguṇānucaraṇanirdeśaḥ | yad uta sarvabuddhakṣetratathāgatasamutpattyanantamadhyābhisaṃbodhimukhasamudrasaṃdarśananirdeśaḥ | yad uta ākāśadhātuparamabuddhakṣetratathāgataparṣanmaṇḍalabodhisattvasaṃghabodhimaṇḍābhimukhāvasthānanirdeśaḥ | yad uta sarvatryadhvabuddhakāyasadṛśanirmāṇasarvaromamukhapramuñcanacittakṣaṇadharmadhātuspharaṇanirdeśaḥ | yad uta sarvadiksamudreṣu sarvakṣetrasāgarasamatalādhiṣṭhānaikakāyaspharaṇaprabhāsanirdeśaḥ | yad uta sarvārambaṇataleṣu buddhabhūmivikurvitasarvatryadhvasamavasaraṇādhiṣṭhānasaṃdarśananirdeśaḥ | yad uta sarvakṣetraparamāṇurajaḥsamatryadhvakṣetraparaṃparānānābuddhavikurvitakalpasāgarasaṃdarśananirdeśaḥ | yad uta sarvatryadhvabuddhapraṇidhānasāgarasarvaromanigarjanāparyantādhiṣṭhānabodhisattvasaṃbhavanirdeśaḥ | yad uta dharmadhātupramāṇabuddhasiṃhāsanabodhisattvaparṣanmaṇḍalāsaṃbhinnabodhimaṇḍālaṃkāranānādharmacakrapravartanāparānta_dhiṣṭhānanirdeśaḥ |&nbsp;</span><span id='8841403bi' class='paragraph'>
+						 iti hi bho jinaputrā etān daśān pramukhān kṛtvā anabhilāpyabuddhakṣetraparamāṇūrajaḥsamān etasya siṃhavijṛmbhitasya samādhinirdeśan anugacchāmi | api tu khalu punar bho jinaputrāḥ tathāgatajñānagocara eṣaḥ ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8841779bi' class='paragraph'>
+							(670c6) 爾時,普賢菩薩摩訶薩普觀一切菩薩眾會,欲為開發如來最上師子頻申大三昧故,以等虛空界方便、等三世方便、等法界方便、等一切世界、等一切業、等一切眾生心、等一切眾生欲、等一切眾生根、等一切眾生成熟時、等一切法光影方便,告諸菩薩言：「佛子！我今為汝以十種法門清淨名句,開示演說師子頻申廣大三昧神通境界。&nbsp;</span><span id='8841780bi' class='paragraph'>
+						 何等為十？所謂：等虛空界如來所現,遍法界一切佛剎極微塵中一切諸佛出興次第,及一切剎成壞次第法門名句；等虛空界一切佛剎,盡未來際一切劫中讚歎如來殊勝功德法門名句；等虛空界一切佛剎如來出世,顯現無量菩提門海法門名句；等虛空界一切佛剎,如來所坐最勝道場,菩薩眾會圓滿境界法門名句；一切毛孔於念念中出等三世一切諸佛變化身雲,充滿法界法門名句；以威神力能令一身普現十方一切剎海,光明遍照諸佛世界法門名句；以威神力能於一切諸境界中普現三世一切諸佛種種神變,如觀掌中明了顯現法門名句；能令三世一切佛剎極微塵中普現三世一切佛剎極微塵數佛,顯現種種神通境界,經於劫海相續不斷法門名句；能令一切毛孔出聲演說三世一切諸佛大願海音,盡未來際加持出生一切菩薩法門名句；能令所處師子之座,量同法界,最勝覺解大菩薩眾莊嚴道場,遍一切處,盡未來際,轉於法輪,無間成熟,相續不絕法門名句。&nbsp;</span><span id='8841781bi' class='paragraph'>
+						 佛子！此十法句以為其首,有不可說佛剎極微塵數清淨名句微妙法門,皆是如來智慧境界,非我及汝所能證知。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8842157bi' class='paragraph'>
+							དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ་ཀུན་ཏུ་བཟང་པོས་བྱང་ཆུབ་སེམས་དཔའི་ཚོགས་ཐམས་ཅད་ལ་རྣམ་པར་བལྟས་ཏེ། དེ་བཞིན་གཤེགས་པའི་ཏིང་(5)ངེ་འཛིན་སེང་གེ་རྣམ་པར་བསྒྱིངས་པ་འདི་ཉིད་དེ་བས་ཀྱང་རྣམ་པར་དབྱེ་བ་དང་རྒྱ་ཆེར་བརྗོད་པ་དང་། གསལ་བར་བྱ་བ་དང་རབ་ཏུ་བརྗོད་པ་དང་། ཡང་དག་པར་བསྟན་པ་དང་། ཤིན་ཏུ་སྣང་བར་བྱ་བ་དང་། རབ་ཏུ་གསལ་བར་བྱ་བ་དང་མན་ངག་བསྟན་པའི་ཕྱིར། ཆོས་ཀྱི་དབྱིངས་(6)ཀྱི་ཚུལ་ནམ་མཁའི་དབྱིངས་དང་མཉམ་པས། དུས་གསུམ་མཉམ་པ་ཉིད་དང་། ཆོས་ཀྱི་དབྱིངས་མཉམ་པ་ཉིད་དང་སེམས་ཅན་གྱི་ཁམས་མཉམ་པ་ཉིད་དང་། འཇིག་རྟེན་ཐམས་ཅད་མཉམ་པ་ཉིད་དང་ལས་ཀྱི་རྒྱུད་ཐམས་ཅད་མཉམ་པ་ཉིད་དང་སེམས་ཅན་གྱི་བསམ་(7)པ་མཉམ་པ་ཉིད་དང་། སེམས་ཅན་གྱི་མོས་པ་མཉམ་པ་ཉིད་དང་། ཆོས་ཀྱི་སྣང་བ་མཉམ་པ་ཉིད་དང་། སེམས་ཅན་ཡོངས་སུ་སྨིན་པར་བྱ་བའི་དུས་མཉམ་པ་ཉིད་དང་། འགྲོ་བ་ཐམས་ཅད་ཀྱི་དབང་པོ་མཉམ་པ་ཉིད་ཀྱིས། དེ་བཞིན་གཤེགས་པའི་ཏིང་ངེ་འཛིན་སེང་(302a1)གེ་རྣམ་པར་བསྒྱིངས་པ། འདི་ཉིད་བྱང་ཆུབ་སེམས་དཔའ་དེ་དག་ལ་བསྟན་པའི་ཚུལ་བཅུས་ཡང་དག་པར་རབ་ཏུ་སྟོན་ཏེ།&nbsp;</span><span id='8842158bi' class='paragraph'>
+						 བཅུ་གང་ཞེ་ན། འདི་ལྟ་སྟེ། ཆོས་ཀྱི་དབྱིངས་ཐམས་ཅད་དུ་གཏོགས་པའི་སངས་རྒྱས་ཀྱི་ཞིང་གི་རྡུལ་ཤིན་ཏུ་ཕྲ་བ་རྣམས་ལ། །སངས་རྒྱས་གཅིག་(2)ནས་གཅིག་ཏུ་བརྒྱུད་པ་བསྟན་པ་དང་། འདི་ལྟ་སྟེ། ནམ་མཁའི་དབྱིངས་ཀྱིས་ཀླས་པའི་སངས་རྒྱས་ཀྱི་ཞིང་ཐམས་ཅད་དུ། །ཕྱི་མའི་མཐའི་མུར་ཐུག་པའི་བསྐལ་པར་དེ་བཞིན་གཤེགས་པའི་ཡོན་ཏན་རྗེས་སུ་བརྗོད་པ་བསྟན་པ་དང་། འདི་ལྟ་སྟེ། སངས་རྒྱས་ཀྱི་ཞིང་(3)ཐམས་ཅད་དུ་དེ་བཞིན་གཤེགས་པ་ཡོངས་སུ་སྐྱེ་བ་དང་། མཐའ་དང་དབུས་མེད་པའི་མངོན་པར་རྫོགས་པའི་བྱང་ཆུབ་ཀྱི་སྒོ་རྒྱ་མཚོ་ཡོངས་སུ་བརྗོད་ཅིང་བསྟན་པ་དང་། འདི་ལྟ་སྟེ། ནམ་མཁའི་དབྱིངས་ཀྱིས་ཀླས་པའི་སངས་རྒྱས་ཀྱི་ཞིང་གི་དེ་བཞིན་གཤེགས་པའི་འཁོར་གྱི་དཀྱིལ་(4)འཁོར་གྱི་བྱང་ཆུབ་སེམས་དཔའི་དགེ་འདུན་སྙིང་པོ་བྱང་ཆུབ་ལ་མངོན་དུ་གྱུར་པའི་གནས་བསྟན་པ་དང་། འདི་ལྟ་སྟེ་དུས་གསུམ་གྱི་སངས་རྒྱས་ཀྱི་སྐུ་དང་འདྲ་བར་སྤྲུལ་པ་བ་སྤུའི་སྒོ་ཐམས་ཅད་ནས། སེམས་སྐད་ཅིག་ལ་རབ་ཏུ་དགྱེ་ཞིང་ཆོས་ཀྱི་དབྱིངས་རྒྱས་པར་དགང་བ་བསྟན་པ་དང་། (5)འདི་ལྟ་སྟེ། ཕྱོགས་རྒྱ་མཚོ་ཐམས་ཅད་དུ་སངས་རྒྱས་ཀྱི་ཞིང་རྒྱ་མཚོ་གཞི་མཉམ་པར་བྱིན་གྱིས་བརླབ་ཅིང་ལུས་གཅིག་གིས་རྒྱས་པར་དགང་བསྟན་པ་དང་། འདི་ལྟ་སྟེ། དམིགས་པའི་གཞི་ཐམས་ཅད་ལ་སངས་རྒྱས་ཀྱི་རྣམ་པར་སྤྲུལ་བ་དུས་གསུམ་ཐམས་ཅད་ཡང་དག་པར་གཞོལ་བར་འགྱུར་བའི་(6)བྱིན་གྱི་རླབས་ཡང་དག་པར་བསྟན་པ་དང་། འདི་ལྟ་སྟེ་ཞིང་ཐམས་ཅད་ཀྱི་རྡུལ་ཤིན་ཏུ་ཕྲ་བ་རྣམས་ལ། དུས་གསུམ་གྱི་ཞིང་གཅིག་ནས་གཅིག་ཏུ་བརྒྱུད་པའི་སངས་རྒྱས་ཀྱི་རྣམ་པར་འཕྲུལ་པ་དང་། བསྐལ་པ་རྒྱ་མཚོ་ཡོངས་སུ་བཤད་ཅིང་བསྟན་པ་དང་། འདི་ལྟ་སྟེ། དུས་(7)གསུམ་གྱི་སངས་རྒྱས་ཀྱི་སྨོན་ལམ་རྒྱ་མཚོ་ཐམས་ཅད་བ་སྤུའི་སྒོ་ཐམས་ཅད་ནས་རབ་ཏུ་བརྗོད་པ་ཕྱི་མའི་མཐར་བྱིན་གྱིས་བརླབས་པས། བྱང་ཆུབ་སེམས་དཔའ་ཡང་དག་པར་འབྱུང་བར་བསྟན་པ་དང་། འདི་ལྟ་སྟེ། ཆོས་ཀྱི་དབྱིངས་དང་མཉམ་པའི་སེང་གེའི་ཁྲི་དང་།(302b1)བྱང་ཆུབ་སེམས་དཔའི་འཁོར་གྱི་དཀྱིལ་འཁོར་དང་། སྙིང་པོ་བྱང་ཆུབ་ཀྱི་རྒྱན་ཐ་མྱི་དད་པ་དང་། ཆོས་ཀྱི་འཁོར་ལོ་རྣམ་པ་ཐ་དད་པ་རབ་ཏུ་བསྐོར་བ། ཕྱི་མའི་མཐར་བྱིན་གྱིས་བརླབ་པ་བསྟན་པའོ། །&nbsp;</span><span id='8842159bi' class='paragraph'>
+						 ཀྱེ་རྒྱལ་བའི་སྲས་དེ་ལྟར་སེང་གེ་རྣམ་(2)པར་བསྒྱིངས་པའི་ཏིང་ངེ་འཛིན་འདི་ལ་བསྟན་པ་བཅུ་པོ་དེ་དག་ལ་སྩོགས་པ་ཤིན་ཏུ་བསྟན་པ་སངས་རྒྱས་ཀྱི་ཞིང་བརྗོད་དུ་མེད་པའི་རྡུལ་ཤིན་ཏུ་ཕྲ་བ་སྙེད་ཡོད་དེ། ཀྱེ་རྒྱལ་བའི་སྲས་དག་དེ་ནི་དེ་བཞིན་གཤེགས་པའི་ཡེ་ཤེས་ཀྱི་སྤྱོད་ཡུལ་ལོ། །&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='8841404bi' class='paragraph'>
+							atha khalu samantabhadro bodhisattva etasyaiva siṃhavijṛmbhitasya tathāgatasamādher arthanirdeśaṃ dyotayamāno buddhādhiṣṭhānena tathāgatavadanaṃ prekṣamāṇaḥ sarvāvantaṃ(?) parṣanmaṇḍalasamudraṃ vyavalokya acintyabuddhaviṣayānantamadhyatathāgatasamādhivikurvitāni vyavalokya acintyajñānamāyāgatadharmatāṃ vyavalokya acintyatrayadhvabuddhasamatāṃ vyavalokya acintyānantamadhyasarvavākpathaniruktisarvadharmanayān vyavalokya tasyāṃ velāyām imā gāthā abhāṣata -&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8841782bi' class='paragraph'>
+							(671a7) 爾時,普賢菩薩欲重宣此如來所入師子頻申廣大三昧少分境界,承佛神力,一心瞻仰,觀察如來不可思議菩薩眾海；觀察如來不可思議三昧神通,種種變現；觀察如來不可思議入出一切諸世界海；觀察如來不可思議入一切法幻智境界；觀察如來不可思議普現三世一切諸佛悉皆平等；觀察如來不可思議無量無邊諸語言道,開悟一切諸法門海,而說偈言：&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8842160bi' class='paragraph'>
+							དེ་ནས་བྱང་ཆུབ་སེམས་(3)དཔའ་ཀུན་ཏུ་བཟང་པོས་དེ་བཞིན་གཤེགས་པའི་ཏིང་ངེ་འཛིན་ཆེན་པོ་སེང་གེ་རྣམ་པར་བསྒྱིངས་པ་འདི་ཉིད་ཀྱི་དོན་གྱི་ཕྱོགས་བསྟན་པའི་ཕྱིར་སངས་རྒྱས་ཀྱི་བྱིན་གྱི་རླབས་ཀྱིས་དེ་བཞིན་གཤེགས་པའི་ཞལ་དུ་ལྟ་ཞིང་འཁོར་གྱི་དཀྱིལ་འཁོར་རྒྱ་མཚོ་ཐམས་ཅད་ལ་(4)རྣམ་པར་བལྟས་ནས། སངས་རྒྱས་ཀྱི་ཡུལ་བསམ་གྱིས་མི་ཁྱབ་པ་དང་། དེ་བཞིན་གཤེགས་པའི་ཏིང་ངེ་འཛིན་གྱི་རྣམ་པར་འཕྲུལ་པ་མཐའ་དང་དབུས་མེད་པ་ལ་རྣམ་པར་བལྟས་ཏེ། འཇིག་རྟེན་གྱི་ཁམས་བསམ་གྱིས་མི་ཁྱབ་པར་གཞོལ་བ་ལ་རྣམ་པར་(5)བལྟས་ནས་ཡེ་ཤེས་བསམ་གྱིས་མྱི་ཁྱབ་པའི་སྒྱུ་མའི་ཆོས་ཉིད་ལ་རྣམ་པར་བལྟས་ཏེ། དུས་གསུམ་གྱི་སངས་རྒྱས་མཉམ་པ་ཉིད་བསམ་གྱིས་མི་ཁྱབ་པ་ལ་རྣམ་པར་བལྟས་ནས། མཐའ་དང་དབུས་མེད་པའི་ངག་གི་ལམ་དང་ངེས་པའི་ཚིག་དང་། ཆོས་ཀྱི་(6)ཚུལ་ཐམས་ཅད་ལ་རྣམ་པར་བལྟས་ཏེ། དེའི་ཚེ་ཚིགས་སུ་བཅད་པ་འདི་དག་སྨྲས་སོ། །&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='8841405bi' class='paragraph'>
+							sarvakṣetraparamāṇusādṛśā ekaromi jinakṣetrasāgarāḥ | <br />bodhisattvaparṣatparīvṛtas tatra buddha sthitu buddhaāsane ||&nbsp;</span><span id='8841406bi' class='paragraph'>
+						 (26) ekaromi bahukṣetrasāgarā bodhimaṇḍasthita padmaāsane | <br />dharmadhātu vipulam karitvanā dṛśyate drumavareṣu nāyakaḥ ||&nbsp;</span><span id='8841407bi' class='paragraph'>
+						 sarvakṣetraparamāṇusādṛśā ekaromi jina saṃniṣaṇṇakāḥ | <br />bodhisattvaparṣatparīvṛtāḥ sarvabhadracariyāṃ prabhāṣate ||&nbsp;</span><span id='8841408bi' class='paragraph'>
+						 ekakṣetri jina saṃniṣaṇṇakāḥ sarvakṣetraprasarān spharitvanā | <br />bodhisattva bahumegha akṣayā enti te daśadiśāṃ samantato ||&nbsp;</span><span id='8841409bi' class='paragraph'>
+						 kṣetrakoṭiparamāṇusādṛśā bodhisattvaguṇasāgaraprabhāḥ | <br />utthihantu parṣāsu śāstuno dharmadhātu sphariṣu daśa diśaḥ ||&nbsp;</span><span id='8841410bi' class='paragraph'>
+						 sarvakṣetrapratibhāsadarśanā dharmarājajinajñānasāgarāḥ | <br />te ca bhadracariyapratiṣṭhitāḥ sarvabuddhapariṣā upāgami ||&nbsp;</span><span id='8841411bi' class='paragraph'>
+						 sarvakṣetraprasare niṣaṇṇakā bodhisattvacaraprītigocarā | <br />dharmamegha śruṇamāna sūratā ekakṣetri cari kalpakoṭiyaḥ ||&nbsp;</span><span id='8841412bi' class='paragraph'>
+						 bodhisattva vicaranti cārikāṃ dharmasāgaracarī virocanā | <br />otaranti praṇidhānasāgarāṃs te pratiṣṭha jinabhūmigocarāḥ ||&nbsp;</span><span id='8841413bi' class='paragraph'>
+						 anyamanyajinadharmasaṃbhavās te samantacari bhadrabuddhiṣu | <br />sarvabuddhaguṇavarṇasāgarān otaranti vipulaṃ vikurvitam ||&nbsp;</span><span id='8841414bi' class='paragraph'>
+						 (27) dharmadhātusugatiṃ spharitvanā sarvakṣetraparamāṇusādṛśān | <br />kāyamegha satataṃ pramuñcato dharmavarṣatu upetu bodhaye ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8841783bi' class='paragraph'>
+							一一毛孔中剎海,等一切剎極微數,<br />佛悉於中坐道場,菩薩眾會共圍遶。&nbsp;</span><span id='8841784bi' class='paragraph'>
+						 一一毛孔所有剎,佛悉於中坐道場,<br />安處最勝蓮華座,普現神通周法界。&nbsp;</span><span id='8841785bi' class='paragraph'>
+						 一毛端處所有佛,一切剎土極微數,<br />悉於菩薩眾會中,皆為宣揚普賢行。&nbsp;</span><span id='8841786bi' class='paragraph'>
+						 如來安坐於一剎,一切剎中無不現,<br />十方無盡菩薩雲,普共同來集其所。&nbsp;</span><span id='8841787bi' class='paragraph'>
+						 功德光明菩薩海,百千億剎極微數,<br />俱從會起讚如來,遍往十方充法界。&nbsp;</span><span id='8841788bi' class='paragraph'>
+						 自在遊於深法界,悉住普賢無等行,<br />現一切剎放光明,普入無邊諸佛會。&nbsp;</span><span id='8841789bi' class='paragraph'>
+						 普於十方一切剎,安住最勝諸佛所,<br />聽聞正法具修行,一一土經無量劫。&nbsp;</span><span id='8841790bi' class='paragraph'>
+						 菩薩常修種種行,皆入普賢願海中,<br />住佛境界德無邊,法海光明無不遍。&nbsp;</span><span id='8841791bi' class='paragraph'>
+						 通達普賢廣大行,出生諸佛無盡法,<br />讚佛功德海無涯,現眾神通充法界。&nbsp;</span><span id='8841792bi' class='paragraph'>
+						 身雲普現如塵數,念念恒周一切剎,<br />甘露法雨潤群生,普遍法界令開悟。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8842161bi' class='paragraph'>
+							བ་སྤུ་གཅིག་ལ་རྒྱ་མཚོ་རྒལ་བའི་ཞིང་། །ཞིང་ཀུན་ཤིན་ཏུ་ཕྲ་བའི་རྡུལ་དང་མཉམ། །<br />དེ་ནས་སངས་རྒྱས་བྱང་ཆུབ་སེམས་དཔའི་འཁོར། ཀུན་གྱིས་ཡོངས་(7)བསྐོར་སངས་རྒྱས་གདན་ལ་བཞུགས། །&nbsp;</span><span id='8842162bi' class='paragraph'>
+						 སྤུ་གཅིག་རྩེ་ལ་ཞིང་མང་རྒྱ་མཚོ་རྣམས། །སྙིང་པོ་བྱང་ཆུབ་པདྨོའི་གདན་གནས་པས། །<br />ཆོས་དབྱིངས་རྒྱ་ཆེན་ཡོངས་སུ་རྒྱས་བཀང་ཞིང་། །ཤིང་དྲུང་དམ་པ་ཀུན་ན་མགོན་པོ་སྣང་། །&nbsp;</span><span id='8842163bi' class='paragraph'>
+						 ཞིང་རྣམས་ཀུན་གྱི་རྡུལ་(303a1)ཕྲན་རབ་མང་རྙེད། །རྒྱལ་བ་སྤུ་རྩེ་གཅིག་ལ་ཡོངས་བཞུགས་པ། །<br />བྱང་ཆུབ་སེམས་དཔའི་འཁོར་གྱི་ཡོངས་སུ་བསྐོར། །ཀུན་ཀྱང་བཟང་པོའི་སྤྱོད་པ་སྟོན་པ་མཛད། །&nbsp;</span><span id='8842164bi' class='paragraph'>
+						 ཞིང་མཆོག་གཅིག་ན་རྒྱལ་བ་བཞུགས་གྱུར་ཀྱང་། །བྱང་ཆུབ་སེམས་དཔའི་སྤྲིན་མང་མི་ཟད་པ། <br />དེ་(2)དག་ཕྱོགས་བཅུ་མ་ལུས་ཐམས་ཅད་ནས། །འབྱམ་ཀླས་ཞིང་ཀུན་བཀང་ཞིང་ཀུན་ཀྱང་འོང་། །&nbsp;</span><span id='8842165bi' class='paragraph'>
+						 ཞིང་རྣམས་བྱེ་བའི་རྡུལ་ཕྲན་མཉམ་པ་ཡི། །བྱང་ཆུབ་སེམས་དཔའ་ཡོན་ཏན་རྒྱ་མཚོ་འོད། །<br />ཕྱོགས་བཅུའི་ཆོས་དབྱིངས་རྒྱས་པ་ཀུན་བཀང་ཞིང་། །སྟོན་པ་དེ་ལ་(3)ཀུན་ཀྱང་འཁོར་ནས་ལྡང་། །&nbsp;</span><span id='8842166bi' class='paragraph'>
+						 ཞིང་རྣམས་ཀུན་ཏུ་གཟུགས་བརྙན་རབ་ཏུ་སྟོན། །ཆོས་ཀྱི་རྒྱལ་པོ་རྒྱལ་བའི་ཡེ་ཤེས་མཚོ། །<br />དེ་དག་ཀུན་ཀྱང་བཟང་པོའི་སྤྱོད་ལ་གནས། །སངས་རྒྱས་ཀུན་གྱི་འཁོར་དུ་ཉེ་བར་འདོང་། །&nbsp;</span><span id='8842167bi' class='paragraph'>
+						 འབྱམ་ཀླས་ཞིང་རྣམས་ཀུན་ན་འཁོད་སྤྱོད་ཅིང་། །(4)བྱང་ཆུབ་སེམས་དཔའི་དགའ་བ་རབ་གནས་ཏེ། །<br />ཆོས་ཀྱི་སྤྲིན་མཉན་དཔའ་བོ་དེ་དག་ནི། །ཞིང་གཅིག་དུ་ཡང་བསྐལ་པ་བྱེ་བར་སྤྱོད། །&nbsp;</span><span id='8842168bi' class='paragraph'>
+						 བྱང་ཆུབ་སེམས་དཔའི་སྤྱད་པ་སྤྱོད་པར་བྱེད། །ཆོས་ཀྱི་གང་ཆེན་མཚོ་སྤྱོད་རྣམ་པར་སྣང་། །<br />སྨོན་ལམ་རྒྱ་མཚོ་ཀུན་ལ་རབ་ཏུ་(5)འཇུག་། དེ་དག་སངས་རྒྱས་ས་ཡི་སྤྱོད་ཡུལ་གནས། །&nbsp;</span><span id='8842169bi' class='paragraph'>
+						 རྒྱལ་བའི་ཆོས་རྣམས་གཞན་དང་གཞན་བྱུང་བའི། །དེ་དག་ཀུན་ཏུ་བཟང་པོའི་སྤྱོད་པ་ཤེས། །<br />སངས་རྒྱས་ཡོན་ཏན་ལེགས་པ་རྒྱ་མཚོ་དང་། །རྣམ་པར་འཕྲུལ་པ་རྒྱ་ཆེན་ཡངས་ལ་འཇུག་།&nbsp;</span><span id='8842170bi' class='paragraph'>
+						 བདེ་(6)གཤེགས་ཆོས་དབྱིངས་ཀུན་ཏུ་རྒྱས་བཀང་ཞིང་། །ཞིང་རྣམས་ཀུན་གྱི་རྡུལ་ཕྲན་ཇི་སྙེད་པའི། །<br />སྐུ་ཡི་སྤྲིན་རྣམས་རྟག་ཏུ་འགྱེད་མཛད་ཅིང་། །ཆོས་ཀྱི་ཆར་གྱིས་བྱང་ཆུབ་རབ་ལ་དགོད།། །།&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='8841415bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8841793bi' class='paragraph'>
+							&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8842171bi' class='paragraph'>
+							སངས་རྒྱས་རྨད་གཅད་ཅེས་བྱ་བ་ཤིན་ཏུ་རྒྱས་པ་ཆེན་(7)པོའི་མདོ། །བམ་པོ་ཉི་ཤུ་དྲུག་པ།&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='8841416bi' class='paragraph'>
+							atha khalu bhagavān bhūyasyā mātrayā teṣāṃ bodhisattvānām atraiva siṃhavijṛmbhite buddhasamādhau saṃniyojanārthaṃ bhrūvivarāntarād ūrṇākośād dharmadhātusamantadvāravijñaptitryadhvāvabhāsaṃ nāma raśmiṃ niścārayitvā anabhilāpyabuddhakṣetraparamāṇurajaḥsamaraśmiparivārāṃ daśadiksarvalokadhātusamudreṣu sarvakṣetraprasarān avabhāsayati sma ||&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8841794bi' class='paragraph'>
+							(671b8) 爾時,世尊以最勝甚深廣大意樂,正念思惟,欲令眾會諸菩薩等安住如來師子頻申大三昧故,從眉間白毫相中放大光明,名普照現三世法界門,以不可說佛剎極微塵數光明而為眷屬,普照十方一切剎海。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8842172bi' class='paragraph'>
+							དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་བྱང་ཆུབ་སེམས་དཔའ་དེ་དག་སངས་རྒྱས་ཀྱི་ཏིང་ངེ་འཛིན་སེང་གེ་རྣམ་པར་བསྒྱིངས་པ་འདི་ཉིད་ལ་དེ་བས་ཀྱང་བརྣན་ཏེ། འགོད་པ་མཛད་པའི་དོན་དུ་སྨིན་མཚམས་ཀྱི་མཛོད་སྤུའི་ནང་ནས་ཆོས་(303b1)ཀྱི་དབྱིངས་སྒོ་ཀུན་ནས་རྣམ་པར་དམིགས་པས་དུས་གསུམ་སྣང་བ་ཞེས་བྱ་བའི་འོད་ཟེར་ཆེན་པོ་འོད་ཟེར་གྱི་འཁོར་སངས་རྒྱས་ཀྱི་ཞིང་བརྗོད་དུ་མེད་པའི་རྡུལ་ཤིན་ཏུ་ཕྲ་བ་སྙེད་དང་ལྡན་པ་བཀྱེ་སྟེ། ཕྱོགས་བཅུའི་འཇིག་རྟེན་གྱི་ཁམས་(2)རྒྱ་མཚོ་ཐམས་ཅད་ཀྱི་སངས་རྒྱས་ཀྱི་ཞིང་འབྱམ་ཀླས་པ་ཐམས་ཅད་སྣང་བར་མཛད་དོ། །&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class='Sanskrit'><span id='8841417bi' class='paragraph'>
+							atha khalu ye te bodhisattva jetavane saṃnipatitāḥ, te paśyanti sma sarvadharmadhātugateṣu sarvabuddhakṣetreṣu ākāśadhātuparyavasāneṣu sarvabuddhakṣetraparamāṇurajaḥsamabuddhakṣetraparamāṇurajontargateṣu buddhakṣetrasaṃgateṣu nānābaleṣu nānāviśuddheṣu nānāpratiṣṭhāneṣu nānāsaṃsthāneṣu buddhakṣetreṣu bodhimaṇḍavaragataṃ bodhisattvasiṃhāsananiṣaṇṇaṃ sarvalokendrasaṃpūjitaṃ bodhisattvagaṇaparivṛtamanuttarāṃ samyaksaṃbodhim abhisaṃbudhyamāṇaṃ kvacid dharmacakraṃ pravartayantaṃ dharmadhātuspharaṇena svaramaṇḍalena anabhilāpyabuddhakṣetravipuleṣu parṣanmaṇḍaleṣu, kvacid devabhavanagataṃ kvacin nāgabhavanagataṃ kvacid yakṣabhavanagataṃ kvacid gandharvabhavanagataṃ kvacid asurabhavanagataṃ kvacid garuḍabhavanagataṃ kvacit kinnarabhavanagataṃ kvacin mahoragabhavanagataṃ kvacin manuṣyendrabhavanagataṃ kvacin manusyaloke grāmanagaranigamajanapadarāṣṭrarājadhānīṣu nānāvikurvitair dharmaṃ deśayamānaṃ nāneryāpathair nānāvidhair ātmabhāvair nānāsamādhimukhavijñaptibhir nānāsamādhyabhijñābhir nānākulagotrasaṃbhavair nānāvarṇavijñaptibhir nānāprabhāmaṇḍalair nānāraśmijālapramuñcanair nānāsvaramaṇḍalair nānāparṣanmaṇḍalair nānākathāpuruṣādhiṣṭhānair nānāśāsanādhiṣṭhānair nānāpadavyañjanair nānāniruktibhir dharmaṃ deśayantam paśyanti sma | yāvantaś ca te bodhisattvāsteṣu teṣu parṣanmaṇḍaleṣu tathāgatasya gambhīrabuddhasamādhivikurvitāni paśyanti sma |&nbsp;</span><span id='8841418bi' class='paragraph'>
+						 dharmadhātuparameṣu lokadhātuṣv ākāśadhātuparyavasāneṣu daśadigvyavasthāneṣu anantadikparivartasamavasaraṇeṣu sarvadiksamudreṣu nānādharmadigdvāreṣu nānādiksaṃjñāgatesu nānādiksamavasaraṇeṣu nānādigbhāgeṣu nānādiganugameṣu nānādiksāgareṣu yad uta pūrvasyāṃ diśi dakṣiṇāyāṃ paścimāyām uttarasyām uttarapūrvāyāṃ pūrvadakṣiṇāyāṃ dakṣiṇapaścimāyāṃ paścimottarasyāmadhaḥ ūrdhvaṃ diśi kṣetrakāyadikṣu sattvakāyadikṣv api sattvasaṃjñāgatadikṣv atipūrvāntakoṭīgatadikṣv api daśadikpratyutpannadikṣv api sarvākāśapathasūkṣmavālamukhanikṣepapragrahaṇadikṣv api sarvakṣetraparamāṇurajaḥparaṃparādikṣv api dikpraveśāvataraṇadikṣv api nānākarmābhisaṃskārasamutthitadikṣv api ekavālapathānantamadhyākāśatalasaṃjñāgatadikpatheṣv api samatānusṛtābhisaṃbhinnatryadhvatalasamatānugatasarvajagadasaṃbhinnasarvasattvasaṃjñāgatasamarutasarvajagaccitteṣu pratibhāsaprāptāni sarvasattvakāyeṣv abhimukhapralambasarvaparṣadupasaṃkramaṇarūpāṇi sarvakalpeṣu jñānāsaṃbhinnāni sarvakṣetreṣu sarvatra samatayā (28) yathāśayānāṃ sattvānām abhimukharūpasaṃdarśanavijñaptīni sarvabuddhadharmasaṃprakāśanasarvasattvavinayāpratiprasrabdhāni tathāgatavikurvitāni paśyanti sma |&nbsp;</span><span id='8841419bi' class='paragraph'>
+						 sarve te bhagavatā vairocanena pūrvakuśalacaryāsabhāgatayā caturbhiḥ saṃgrahavastubhiḥ saṃgṛhītāḥ, darśanena śravaṇena anusmṛtyā paryupāsanena ca paripācitāḥ, pūrvam anuttarāyāṃ samyaksaṃbodhau cittam utpāditāḥ, tatra tathāgateṣūpasaṃkramantaḥ kuśalamūlaiḥ saṃgṛhītāḥ, yathākuśalamūlasabhāgatayā sarvajñatāparipākopāyasuparigṛhītattvāt tadacintyaṃ bhagavato vairocanasya samādhivikurvitam avataranti dharmadhātuvipulam ākāśadhātuparyavasānam | kecid dharmakāyam avataranti, kecid rūpakāyam, kecitpūrvaṃ bodhisattvasamudāgamam, kecit pāramitāparipūrim, kecic caryāmaṇḍalaviśuddhivyūham, kecid bodhisattvabhūmivikurvitam, kecid abhisaṃbodhivikurvitam, kicid buddhavihārasamādhyasaṃbhedavikurvitam, kecit tathāgatabalavaiśāradyajñānam, kecid buddhapratisaṃvitsāgaramavataranti | evaṃpramukhān daśabuddhakṣetrān abhilāpyaparamāṇurajaḥsamān buddhavikurvitasamudrān avataranti | nānādhimuktibhir nānāpathair nānādvārair nānāpraveśair nānāvatārainārnānayair nānānugamair nānādigbhir nānābhājanair nānādeśair nānālokair nānādhigamair nānāsaṃbhārair nānāvikurvitair nānopāyair nānāsamādhibhiḥ tān buddhavikurvitasamudrān avataranti nānāsamādhy avatāraiḥ |&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Chinese'><span id='8841795bi' class='paragraph'>
+							時,逝多林菩薩眾會悉見十方盡法界、虛空界一切世界所有極微；一一極微各有一切佛剎極微塵數諸佛國土種種名字、種種色相、種種莊嚴、種種清淨、種種依住、種種形狀,如是一切諸國土中皆有最勝菩提道場；一一道場皆有莊嚴寶師子座；一一座上皆有菩薩成等正覺,一切菩薩所共圍遶,一切世主恭敬供養。或見處在不可說佛剎大眾會中轉正法輪,其聲無礙,遍周法界；或見處在天王宮中、龍王宮中、夜叉王宮、乾闥婆、阿修羅、迦樓羅、緊那羅、摩睺羅伽、人、非人等諸王宮中,及餘人間村營、城邑、王都、聚落、乃至種種眾生住處,現種種神力,說種種法門；所謂：生種種族姓、受種種色身、住種種威儀、示種種相好、佩種種圓光、放種種光網、處種種眾會、入種種三昧、起種種神變、現種種威力、發種種音聲、出種種言辭、以種種名句演種種教法,如此會中菩薩大眾見於如來甚深三昧廣大神變,&nbsp;</span><span id='8841796bi' class='paragraph'>
+						 如是盡法界、虛空界,東、西、南、北,四維,上、下,遍一切處,種種方轉變中、種種方法門中、種種方想住中、種種方出生中、種種方分齊中、種種方解起中、種種方海中,皆依於眾生心想而住,始從前際至今現在所有一切國土身、一切眾生身、一切毛孔中、一切極微中、及彼一切虛空界中、一一毛端量處皆有一切剎土極微塵數種種剎海、種種業起相續不斷,次第而住,其中所有道場眾會見佛神力悉亦如是,以得見佛神通力故,悉能遍入十方三世一切世界眾生心中,現其影像,隨諸眾生種種樂欲出妙言音,隨其所應演說諸法,普入眾會中,普現眾生前,色相有別,智慧無異,遍一切剎,盡未來際,自在示現,常無休息,教化調伏一切眾生,其有見此神通力者,&nbsp;</span><span id='8841797bi' class='paragraph'>
+						 皆是毘盧遮那如來過去修集願力善根之所攝受：或昔曾以四攝善根之所攝受；或是往昔見、聞、憶念、親近、供養之所成熟；或是往昔令其發起阿耨多羅三藐三菩提心；或昔曾於如來所修菩薩行時經遊之處,勇猛精勤善根所攝；或昔曾於一切佛所,與佛同種相似善根；或是如來於過去時為求無上一切智故,種種方便教化成熟。是故,皆得入於如來不可思議甚深三昧,盡法界、虛空界廣大神變：或有得見入佛法身；或有得見入佛色身；或有得見入佛智身；或有得見入於如來過去所行清淨行海；或有得見入於如來究竟圓滿功德彼岸；或有得見入於菩薩莊嚴行輪；或有得見入於菩薩所證諸地；或有得見入於如來成正覺智；或有得見入佛所住諸三昧門、平等神變；或有得見入於如來十種智力、四無所畏；或有得見入於如來四無礙解辯才大海；入如是等十不可說佛剎極微塵數如來種種大神變海,彼諸菩薩以種種信、種種解、種種道、種種門、種種入、種種教、種種隨順、種種方所、種種根器、種種國土、種種世界、種種智慧、種種法聚、種種神變、種種方便、種種三昧,以如是等入於如來神變大海。&nbsp;</span></div></div><div class='textvar' style='width:32.333333333333%;'><div class='Tibetan'><span id='8842173bi' class='paragraph'>
+							དེ་ནས་བྱང་ཆུབ་སེམས་དཔའ་ཛེ་ཏའི་ཚལ་དུ་ཚོགས་པ་དེ་དག་གི་ཆོས་ཀྱི་དབྱིངས་ཐམས་ཅད་དུ་གཏོགས་པའི་སངས་རྒྱས་ཀྱི་ཞིང་ནམ་མཁའི་དབྱིངས་ཀྱི་མཐའ་ཀླས་པ་(3)ཐམས་ཅད་དང་། །སངས་རྒྱས་ཀྱི་ཞིང་ཐམས་ཅད་ཀྱི་རྡུལ་ཤིན་ཏུ་ཕྲ་བའི་ཁོངས་སུ་ཆུད་པའི་སངས་རྒྱས་ཀྱི་ཞིང་ཐམས་ཅད་ཀྱི་རྡུལ་ཤིན་ཏུ་ཕྲ་བ་དག་ལ། སངས་རྒྱས་ཀྱི་ཞིང་གི་མྱིང་དུ་བྱ་བ་ཁ་དོག་སྣ་ཚོགས་དང་། རྣམ་པ་སྣ་ཚོགས་སུ་རྣམ་པར་དག་པ་དང་། ཞིང་(4)སྣ་ཚོགས་དང་། དབྱིབས་སྣ་ཚོགས་དང་ལྡན་པའི་སངས་རྒྱས་ཀྱི་ཞིང་དག་ན། བྱང་ཆུབ་སེམས་དཔའ་སྙིང་པོ་བྱང་ཆུབ་ཏུ་ཕྱིན་ཏེ། སེང་གེའི་ཁྲི་ལ་འདུག་པ་འཇིག་རྟེན་གྱི་དབང་པོ་ཐམས་ཅད་ཀྱིས་ཤིན་ཏུ་མཆོད་པ། བྱང་ཆུབ་སེམས་དཔའི་ཚོགས་ཀྱིས་ཀུན་(5)ནས་བསྐོར་བ། བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་མངོན་པར་འཚང་རྒྱ་བར་མཐོང་སྟེ། ལ་ལ་ན་ནི་སངས་རྒྱས་ཀྱི་ཞིང་བརྗོད་དུ་མྱེད་པ་ཙམ་དུ་ཤིན་ཏུ་ཡངས་པའི་འཁོར་གྱི་དཀྱིལ་འཁོར་ན། ཆོས་ཀྱི་དབྱིངས་རྒྱས་པར་ཁྱབ་པའི་དབྱངས་ཀྱི་དཀྱིལ་(6)འཁོར་གྱིས་ཆོས་ཀྱི་འཁོར་ལོ་བསྐོར་བ་མཐོང་ངོ་། །ལ་ལ་ན་ནི་ལྷའི་གནས་ན་འདུག་། ལ་ལ་ན་ནི་ཀླུའི་གནས་ན་འདུག་། ལ་ལ་ན་ནི་གནོད་སྦྱིན་གྱི་གནས་ན་འདུག་། ལ་ལ་ན་ནི་ལྷ་མ་ཡིན་གྱི་གནས་ན་འདུག་། ལ་ལ་ན་ནི་ནམ་མཁའ་ལྡིང་གི་གནས་ན་འདུག་། (7)ལ་ལ་ན་ནི་མིའམ་ཅིའི་གནས་ན་འདུག་། ལ་ལ་ན་ནི་ལྟོ་འཕྱེ་ཆེན་པོའི་གནས་ན་འདུག་། ལ་ལ་ན་ནི་མིའི་དབང་པོའི་གནས་ན་འདུག་། ལ་ལ་ན་ནི་མིའི་འཇིག་རྟེན་གྱི་གྲོང་དང་། གྲོང་ཁྱེར་དང་། གྲོང་རྡལ་དང་། ལྗོངས་དང་། ཁམས་དང་། རྒྱལ་པོའི་ཕོ་བྲང་(304a1)འཁོར་དག་ན་རྣམ་པར་འཕྲུལ་པ་སྣ་ཚོགས་དང་། སྤྱོད་ལམ་སྣ་ཚོགས་དང་། ལུས་སྣ་ཚོགས་དང་། ཏིང་ངེ་འཛིན་གྱི་སྒོ་རྣམ་པར་དམྱིགས་པ་སྣ་ཚོགས་དང་། ཏིང་ངེ་འཛིན་གྱི་མངོན་པར་ཤེས་པ་སྣ་ཚོགས་དང་། རིགས་དང་རྒྱུད་སྣ་ཚོགས་སུ་བྱུང་བ་དང་། ཁ་དོག་(2)རྣམ་པར་དམིགས་པ་སྣ་ཚོགས་དང་འོད་ཀྱི་དཀྱིལ་འཁོར་སྣ་ཚོགས་དང་། འོད་ཟེར་གྱི་དྲ་བ་དགྱེ་བ་སྣ་ཚོགས་དང་། དབྱངས་ཀྱི་དཀྱིལ་འཁོར་སྣ་ཚོགས་དང་། གཏམ་གྱི་སྐྱེས་བུའི་གཞི་སྣ་ཚོགས་དང་། བསྟན་པའི་གཞི་སྣ་ཚོགས་དང་། །ཚིག་དང་ཡི་གེ་དང་ངེས་པའི་(3)ཚིག་སྣ་ཚོགས་ཀྱིས་འཁོར་གྱི་དཀྱིལ་འཁོར་སྣ་ཚོགས་ན་ཆོས་སྟོན་པ་མཐོང་བར་གྱུར་ཏོ། །&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "8842156";
+							kilderef = "BA-Gv BA45-Gv tib; Kg phal chen ga  301b4 - BA45-Gv tib; Kg phal chen ga 303b304";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					<span id='8842174bi' class='paragraph'>
+						 བྱང་ཆུབ་སེམས་དཔའ་ཇི་སྙེད་ཀྱི་འཇིག་རྟེན་གྱི་ཁམས་ཆོས་ཀྱི་དབྱིངས་ཀྱིས་ཀླས་པ། ནམ་མཁའི་མཐས་གཏུགས་པ་ཕྱོགས་བཅུ་ན་རྣམ་པར་གནས་པ། ཕྱོགས་(4)ཀྱི་རྒྱུད་མཐའ་ཡས་པར་འདུས་པ། ཕྱོགས་རྒྱ་མཚོ་ཐམས་ཅད་དུ་གཏོགས་པ། ཆོས་སྣ་ཚོགས་ཀྱི་སྒོ་དང་ལྡན་པ། ཕྱོགས་ཀྱི་མྱིང་དུ་བྱ་བ་སྣ་ཚོགས་སུ་གཏོགས་པ། ཕྱོགས་སྣ་ཚོགས་ཀུན་ཏུ་གཞོལ་བ། ཕྱོགས་ཆ་རྣམ་པ་ཐ་དད་པར་གཏོགས་པ། ཕྱོགས་སྣ་ཚོགས་ཀྱི་རྗེས་སུ་སོང་བ། (5)ཕྱོགས་རྒྱ་མཚོ་སྣ་ཚོགས་སུ་གཏོགས་པ་འདི་ལྟ་སྟེ། ཤར་ཕྱོགས་དང་། ལྷོ་ཕྱོགས་དང་། ནུབ་ཕྱོགས་དང་། བྱང་ཕྱོགས་དང་། བྱང་དང་ཤར་གྱི་ཕྱོགས་མཚམས་དང་། ཤར་དང་ལྷོའི་ཕྱོགས་མཚམས་དང་། ལྷོ་དང་ནུབ་ཀྱི་ཕྱོགས་མཚམས་དང་། (6)ནུབ་དང་བྱང་གི་ཕྱོགས་མཚམས་དང་། འོག་དང་སྟེང་གི་ཕྱོགས་ཀྱི་ཞིང་གི་ལྷུན་གྱི་ཕྱོགས་དང་། སེམས་ཅན་གྱི་ལུས་ཀྱི་ཕྱོགས་དང་། སེམས་ཅན་གྱི་མྱིང་དུ་བྱ་བའི་ཕྱོགས་དང་། སྔོན་གྱི་མཐའི་མུར་ཐུག་པའི་ཕྱོགས་(7)དང་། ཕྱོགས་བཅུའི་ད་ལྟར་བྱུང་བའི་ཕྱོགས་དང་། ནམ་མཁའི་ཁོངས་ཐམས་ཅད་དུ་སྐྲའི་རྩེ་མོ་ཤིན་ཏུ་ཕྲ་བ་དགོད་པས་དམིགས་པའི་ཕྱོགས་དང་། ཞིང་ཐམས་ཅད་ཀྱི་རྡུལ་ཤིན་ཏུ་ཕྲ་བ་གཅིག་ནས་གཅིག་ཏུ་བརྒྱུད་པའི་ཕྱོགས་ལ་འཇུག་པ་ཁོང་དུ་ཆུད་པར་(304b1)བྱ་བའི་ཕྱོགས་དང་། ལས་ཀྱི་འདུ་བྱེད་སྣ་ཚོགས་ཀྱིས་ཡོངས་སུ་གྲུབ་པའི་ཕྱོགས་དང་། སྐྲའི་རྩེ་མོ་གཅིག་ལ་མཐའ་དང་དབུས་མེད་པའི་ནམ་མཁའི་དབྱིངས་ཀྱི་མྱིང་དུ་བྱར་གཏོགས་པའི་ཕྱོགས་ཀྱི་ཁོངས་སུ་ཆུད་པའི་དུས་གསུམ་གྱི་དབྱིངས་(2)མཉམ་པ་ཉིད་དུ་གཞོལ་བས། ཀུན་ཏུ་གཏོགས་པའི་འགྲོ་བ་ཐམས་ཅད་ཐ་མྱི་དད་པས། སེམས་ཅན་ཐམས་ཅད་ཀྱི་འདུ་ཤེས་ཀྱི་འདུས་ཆེས་ཀྱི་རྣམ་པ་ལ་མཉམ་པའི་སྒྲ་དབྱངས་སུ་གྱུར་པའི་འགྲོ་བ་ཐམས་ཅད་ཀྱི་སེམས་ལ་གཟུགས་བརྙན་རབ་ཏུ་སྣང་བར་གྱུར་པའི་དེ་བཞིན་གཤེགས་པའི་(3)སངས་རྒྱས་ཀྱི་ཏིང་ངེ་འཛིན་རྣམ་པར་འཕྲུལ་པ། སེམས་ཅན་ཐམས་ཅད་ཀྱི་ལུས་ལ་མངོན་པར་ལྟ་བ། དམིགས་པར་བྱ་བས་འཁོར་གྱི་དཀྱིལ་འཁོར་ཐམས་ཅད་དུ་འགྲོ་བའི་ཚུལ་དང་ལྡན་པ། བསྐལ་པ་ཐམས་ཅད་ལ་ཡེ་ཤེས་ཐ་མྱི་དད་པ། ཞིང་ཐམས་ཅད་ལ་ཀུན་ཏུ་སྙོམས་(4)པས་སེམས་ཅན་གྱི་བསམ་པ་ཇི་ལྟ་བ་དེ་བཞིན་དུ་གཟུགས་མངོན་སུམ་དུ་བསྟན་པ་རྣམ་པར་དམིགས་པ་དང་། དེ་བཞིན་གཤེགས་པའི་རྣམ་པར་འཕྲུལ་བ་སངས་རྒྱས་ཀྱི་ཆོས་ཐམས་ཅད་ཡང་དག་པར་བསྟན་པས། སེམས་ཅན་ཐམས་ཅད་འདུལ་བ་རྒྱུན་མི་འཆད་པ་མཐོང་བར་(5)གྱུར་པ་དེ་དག་ཐམས་ཅད་ནི་སྔོན།&nbsp;</span><span id='8842175bi' class='paragraph'>
+						 བཅོམ་ལྡན་འདས་རྣམ་པར་སྣང་མཛད་ཀྱིས་དགེ་བའི་སྤྱོད་པ་སྐལ་བ་མཉམ་པ་དང་། བསྡུ་བའི་དངོས་པོ་བཞིས་ཡོངས་སུ་བསྡུས་པ་མཐོང་བ་དང་མཉམ་པ་དང་། རྗེས་སུ་དྲན་པ་དང་བསྙེན་བཀུར་བས་ཡོངས་སུ་སྨིན་པར་བྱས་པ་དག་གོ་། སྔོན་(6)བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ་ཏུ་སེམས་བསྐྱེད་དུ་བཙུད་པ་དག་གོ་། དེ་བཞིན་གཤེགས་པ་དེ་དང་དེ་དག་གི་དྲུང་དུ་གཤེགས་པའི་ཚེ་དགེ་བའི་རྩ་བས་ཡོངས་སུ་བསྡུས་པ་དག་སྟེ། དེ་ལྟར་དགེ་བའི་རྩ་བ་སྐལ་པ་མཉམ་པས། ཐམས་ཅད་མཁྱེན་པ་ཉིད་(7)དུ་ཡོངས་སུ་སྨིན་པར་འགྱུར་བའི་ཐབས་ཀྱིས་ཤིན་ཏུ་བཟུང་བའི་ཕྱིར། བཅོམ་ལྡན་འདས་རྣམ་པར་སྣང་མཛད་ཀྱི་ཏིང་ངེ་འཛིན་གྱི་རྣམ་པར་འཕྲུལ་པ་ཆོས་ཀྱི་དབྱིངས་ལྟར་ཡངས་ཤིང་ནམ་མཁའི་དབྱིངས་ཀྱི་མཐས་གཏུགས་པར་གྱུར་བ་དག་ཀྱང་མཐོང་ཞིང་ཁོང་དུ་ཆུད་པར་གྱུར་(305a1)པ་ཡིན་ཏེ། །ལ་ལ་ནི་ཆོས་ཀྱི་སྐུ་ལ་འཇུག་གོ་། ལ་ལ་ནི་གཟུགས་ཀྱི་སྐུ་ལ་འཇུག་གོ་། ལ་ལ་ནི་སྔོན་གྱི་བྱང་ཆུབ་སེམས་དཔའི་ཡོངས་སུ་བསྒྲུབ་པ་ལ་འཇུག་གོ་། ལ་ལ་ནི་ཕ་རོལ་ཏུ་ཕྱིན་པ་ཡོངས་སུ་རྫོགས་པ་ལ་འཇུག་གོ་། ལ་ལ་ནི་སྤྱོད་པའི་དཀྱིལ་འཁོར་ཡོངས་སུ་དག་པའི་(2)རྒྱན་ལ་འཇུག་གོ་། ལ་ལ་ནི་བྱང་ཆུབ་སེམས་དཔའི་ས་ཡི་རྣམ་པར་འཕྲུལ་པ་ལ་འཇུག་གོ་། ལ་ལ་ནི་མངོན་པར་བྱང་ཆུབ་པའི་རྣམ་པར་འཕྲུལ་པ་ལ་འཇུག་གོ་། ལ་ལ་ནི་སངས་རྒྱས་རྣམ་པར་སྤྱོད་པའི་ཏིང་ངེ་འཛིན་ཐ་མྱི་དད་པའི་རྣམ་པར་འཕྲུལ་པ་ལ་འཇུག་གོ་། ལ་ལ་(3)ནི་དེ་བཞིན་གཤེགས་པའི་སྟོབས་དང་མྱི་བསྙེངས་པ་ལ་འཇུག་གོ་། ལ་ལ་ནི་སངས་རྒྱས་ཀྱི་སོ་སོ་ཡང་དག་པར་རིག་པ་རྒྱ་མཚོ་ལ་འཇུག་གོ་། དེ་དག་ལ་སྩོགས་པ་སངས་རྒྱས་ཀྱི་རྣམ་པར་འཕྲུལ་པ་རྒྱ་མཚོ་སངས་རྒྱས་ཀྱི་ཞིང་བརྗོད་དུ་མེད་པ་ཕྲག་བཅུའི་རྡུལ་ཤིན་ཏུ་ཕྲ་(4)བ་སྙེད་ལ་འཇུག་སྟེ་མོས་པ་སྣ་ཚོགས་དང་ལམ་སྣ་ཚོགས་དང་། སྒོ་སྣ་ཚོགས་དང་། འཇུག་པ་སྣ་ཚོགས་དང་། འབབ་པ་སྣ་ཚོགས་དང་། རྣམ་པ་སྣ་ཚོགས་དང་། རྗེས་སུ་འབྲང་བ་སྣ་ཚོགས་དང་། ཕྱོགས་སྣ་ཚོགས་དང་སྣོད་སྣ་ཚོགས་དང་ཡུལ་སྣ་ཚོགས་དང་། འཇིག་རྟེན་(5)སྣ་ཚོགས་དང་ཁོང་དུ་ཆུད་པ་སྣ་ཚོགས་དང་། ཚོགས་སྣ་ཚོགས་དང་རྣམ་པར་འཕྲུལ་པ་སྣ་ཚོགས་དང་། ཐབས་སྣ་ཚོགས་དང་ཏིང་ངེ་འཛིན་སྣ་ཚོགས་ཀྱིས་སངས་རྒྱས་ཀྱི་རྣམ་པར་འཕྲུལ་པ་རྒྱ་མཚོ་དེ་དག་ལ་འཇུག་གོ་།&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'><div class=''><span id='bi' class=''>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "";
+							kilderef = "  ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:32.333333333333%;'></div><div class='textvar' style='width:32.333333333333%;'></div><div class='textvar' style='width:32.333333333333%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=621c767d-9318-11eb-a1c5-005056a97067</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>
